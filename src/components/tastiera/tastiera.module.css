@@ -1,0 +1,32 @@
+.display {
+  display: inline-block;
+  width: 360px;
+  height: 60px;
+  border: 1px solid black;
+  font-size: 50px;
+  text-align: right;
+}
+
+.digit {
+  width: 120px;
+  height: 120px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.digit.large {
+  width: 360px;
+  height: 120px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.danger {
+  background-color: red;
+  color: white;
+}
+
+.success {
+  background-color: green;
+  color: white;
+}
