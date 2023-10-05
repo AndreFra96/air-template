@@ -1,20 +1,20 @@
 "use client";
 
-import InputSemplice from "@/components/input-semplice/input-semplice";
-import Tastiera from "@/components/tastiera/tastiera";
+import { PrinterStatus } from "@/components/printer-status/PrinterStatus";
+import { PrinterWriteNonFiscal } from "@/components/printer-write-non-fiscal/PrinterWriteNonFiscal";
 import { useState } from "react";
 
 export default function Test() {
 
-    const [useKeyboard, setUseKeyboard] = useState(true)
-
-    function onPrint(value: number) {
-        alert("Stampo: " + value)
-    }
+    const [ip, setIp] = useState<string>();
 
     return <div>
-        <input id="useKeyboard" type="checkbox" checked={useKeyboard} onChange={() => setUseKeyboard(!useKeyboard)} />
-        <label htmlFor="useKeyboard">USA TASTIERA </label>
-        {useKeyboard ? <Tastiera onPrint={onPrint} /> : <InputSemplice onPrint={onPrint} />}
+        <div style={{ border: '1px solid black', padding: '1rem' }}>
+            <h3>Configurazione:</h3>
+            <label htmlFor="printerIP">IP stampante:</label>
+            <input value={ip} onChange={(e) => setIp(e.target.value)} id="printerIP"></input>
+        </div>
+        <PrinterStatus ip={ip} />
+        <PrinterWriteNonFiscal ip={ip} />
     </div>
 }
