@@ -38,7 +38,7 @@ export function PrinterWriteNonFiscal(props: PrinterWriteProps) {
     }
 
     return <div style={{ border: '1px solid black', padding: '1rem' }}>
-        <h3>Test di stampa:</h3>
+        <h3>Test di stampa non fiscale:</h3>
         <input value={message} onChange={(e) => setMessage(e.target.value)} ></input>
         <button onClick={printMessage}>Stampa messaggio</button>
         {loading && <p>In attesa di risposta...</p>}

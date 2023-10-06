@@ -1,6 +1,7 @@
 "use client";
 
 import { PrinterStatus } from "@/components/printer-status/PrinterStatus";
+import { PrinterWriteFiscal } from "@/components/printer-write-fiscal/PrinterWriteFiscal";
 import { PrinterWriteNonFiscal } from "@/components/printer-write-non-fiscal/PrinterWriteNonFiscal";
 import { useState } from "react";
 
@@ -16,5 +17,6 @@ export default function Test() {
         </div>
         <PrinterStatus ip={ip} />
         <PrinterWriteNonFiscal ip={ip} />
+        <PrinterWriteFiscal ip={ip} />
     </div>
 }
